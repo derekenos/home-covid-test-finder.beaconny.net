@@ -3,6 +3,18 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>
+      
+      document.addEventListener("DOMContentLoaded", () => {
+        // Replace absolute timestamp with a relative "X minutes ago" value.
+        const now = new Date().getTime()
+        Array.from(document.querySelectorAll('.timestamp')).forEach(el => {
+          el.textContent = `${parseInt((now - Date.parse(el.textContent.trim())) / 1000 / 60)} minutes ago`
+        })
+      
+      })
+      
+    </script>
     <style>
       
       body {
@@ -24,6 +36,12 @@
         padding: 0.2rem 0 0.2rem 1rem;
         margin: 0;
         font-size: 1rem;
+      }
+      
+      body > h3 {
+        padding-left: 1rem;
+        font-size: 1.5rem;
+        font-style: italic;
       }
       
       body > div {
@@ -61,11 +79,17 @@
   </head>
   <body>
     <h1>
-      At-home Covid Test Available near Beacon, NY
+      Home COVID Test Availability near Beacon, NY
     </h1>
     <h2>
-      Last updated: 2021-12-24T22:34:29.648558
+      Last updated: 
+      <span class="timestamp">
+        2021-12-24T22:36:52.903903
+      </span>
     </h2>
+    <h3>
+      Note that only CVS inventory data is currently available.
+    </h3>
     <div>
       <div>
         <a href="https://www.cvs.com/shop/abbott-binaxnow-covid-19-antigen-self-test-2-tests-for-serial-testing-prodid-550147">
@@ -90,6 +114,9 @@
             <th>
               In-Stock
             </th>
+            <th>
+              Price
+            </th>
           </tr>
         </thead>
         <tbody>
@@ -109,6 +136,9 @@
             <td>
               30
             </td>
+            <td>
+              $23.99
+            </td>
           </tr>
           <tr>
             <td>
@@ -126,6 +156,9 @@
             <td>
               5
             </td>
+            <td>
+              $23.99
+            </td>
           </tr>
           <tr>
             <td>
@@ -142,6 +175,9 @@
             </td>
             <td>
               1
+            </td>
+            <td>
+              $23.99
             </td>
           </tr>
         </tbody>
@@ -171,6 +207,9 @@
             <th>
               In-Stock
             </th>
+            <th>
+              Price
+            </th>
           </tr>
         </thead>
         <tbody>
@@ -189,6 +228,9 @@
             </td>
             <td>
               2
+            </td>
+            <td>
+              $38.99
             </td>
           </tr>
         </tbody>
@@ -218,6 +260,9 @@
             <th>
               In-Stock
             </th>
+            <th>
+              Price
+            </th>
           </tr>
         </thead>
         <tbody>
@@ -235,7 +280,10 @@
               18.45
             </td>
             <td>
-              322
+              320
+            </td>
+            <td>
+              $9.99
             </td>
           </tr>
           <tr>
@@ -254,6 +302,9 @@
             <td>
               288
             </td>
+            <td>
+              $9.99
+            </td>
           </tr>
           <tr>
             <td>
@@ -270,6 +321,9 @@
             </td>
             <td>
               288
+            </td>
+            <td>
+              $9.99
             </td>
           </tr>
           <tr>
@@ -288,6 +342,9 @@
             <td>
               288
             </td>
+            <td>
+              $9.99
+            </td>
           </tr>
           <tr>
             <td>
@@ -305,6 +362,9 @@
             <td>
               288
             </td>
+            <td>
+              $9.99
+            </td>
           </tr>
           <tr>
             <td>
@@ -320,7 +380,10 @@
               19.32
             </td>
             <td>
-              186
+              184
+            </td>
+            <td>
+              $9.99
             </td>
           </tr>
           <tr>
@@ -339,6 +402,9 @@
             <td>
               180
             </td>
+            <td>
+              $9.99
+            </td>
           </tr>
           <tr>
             <td>
@@ -354,7 +420,10 @@
               14.92
             </td>
             <td>
-              138
+              129
+            </td>
+            <td>
+              $9.99
             </td>
           </tr>
           <tr>
@@ -371,7 +440,10 @@
               5.57
             </td>
             <td>
-              50
+              44
+            </td>
+            <td>
+              $9.99
             </td>
           </tr>
           <tr>
@@ -390,6 +462,9 @@
             <td>
               14
             </td>
+            <td>
+              $9.99
+            </td>
           </tr>
           <tr>
             <td>
@@ -407,6 +482,9 @@
             <td>
               3
             </td>
+            <td>
+              $9.99
+            </td>
           </tr>
           <tr>
             <td>
@@ -423,6 +501,9 @@
             </td>
             <td>
               2
+            </td>
+            <td>
+              $9.99
             </td>
           </tr>
         </tbody>
@@ -452,11 +533,14 @@
             <th>
               In-Stock
             </th>
+            <th>
+              Price
+            </th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td colspan="5">
+            <td colspan="6">
               Totally Out of Stock
             </td>
           </tr>
@@ -487,6 +571,9 @@
             <th>
               In-Stock
             </th>
+            <th>
+              Price
+            </th>
           </tr>
         </thead>
         <tbody>
@@ -506,6 +593,9 @@
             <td>
               124
             </td>
+            <td>
+              $23.99
+            </td>
           </tr>
           <tr>
             <td>
@@ -522,6 +612,9 @@
             </td>
             <td>
               117
+            </td>
+            <td>
+              $23.99
             </td>
           </tr>
           <tr>
@@ -540,6 +633,9 @@
             <td>
               23
             </td>
+            <td>
+              $23.99
+            </td>
           </tr>
           <tr>
             <td>
@@ -557,6 +653,9 @@
             <td>
               5
             </td>
+            <td>
+              $23.99
+            </td>
           </tr>
           <tr>
             <td>
@@ -573,6 +672,9 @@
             </td>
             <td>
               1
+            </td>
+            <td>
+              $23.99
             </td>
           </tr>
         </tbody>
