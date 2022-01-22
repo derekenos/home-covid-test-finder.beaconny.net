@@ -4,36 +4,36 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script>
-      
+
       document.addEventListener("DOMContentLoaded", () => {
         // Replace absolute timestamp with a relative "X minutes ago" value.
         const now = new Date().getTime()
         Array.from(document.querySelectorAll('.timestamp')).forEach(el => {
           el.textContent = `${parseInt((now - Date.parse(el.textContent.trim())) / 1000 / 60)} minutes ago`
         })
-      
+
       })
-      
+
     </script>
     <style>
-      
+
       body {
         font-family: arial;
         font-size: 0.9rem;
         margin: 0;
       }
-      
+
       img {
         width: 80vw;
       }
-      
+
       body > h1 {
         background-color: #999;
         color: #fff;
         padding: 1rem;
         margin: 0;
       }
-      
+
       body > h2 {
         background-color: #bbb;
         color: #fff;
@@ -41,13 +41,13 @@
         margin: 0;
         font-size: 1rem;
       }
-      
+
       body > h3 {
         padding-left: 1rem;
         font-size: 1.5rem;
         font-style: italic;
       }
-      
+
       body > div {
         padding: 1rem;
         margin: 1rem;
@@ -55,7 +55,7 @@
         text-align: center;
         border: solid #888 2px;
       }
-      
+
       body > div > table {
         margin: 1rem 0;
         padding: 1rem;
@@ -65,35 +65,35 @@
         display: block;
         overflow-x: auto;
       }
-      
+
       body > div > table > thead > tr > th,
       body > div > table > tbody > tr > td {
         white-space: nowrap;
         padding: 0.2rem 0.5rem;
       }
-      
+
       body > div > table > thead > tr > th {
         background-color: rgba(0, 0, 0, 0.8);
         color: #fff;
         border-radius: 8px;
       }
-      
+
       @media screen and (min-width: 800px) {
         img {
           width: auto;
         }
-      
+
         body > div {
           display: inline-block;
         }
-      
+
         body > div > table {
           width: 100%;
           border-top: solid #888 2px;
           background-color: transparent;
         }
       }
-              
+
     </style>
   </head>
   <body>
@@ -101,13 +101,15 @@
       Home COVID Test Availability near Beacon, NY
     </h1>
     <h2>
-      Last updated: 
+      Last updated:
       <span class="timestamp">
         2021-12-27T00:53:54.393811Z
       </span>
     </h2>
     <h3>
       Note that only CVS inventory data is currently available.
+      <br>
+      <strong>This data is no longer being updated. If you'd like it to be, let me know at: <a href="mailto:home-covid-test-finder@beaconny.net">home-covid-test-finder@beaconny.net</a></strong>
     </h3>
     <div>
       <div>
@@ -606,4 +608,3 @@
     </div>
   </body>
 </html>
-
